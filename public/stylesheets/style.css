@@ -1,0 +1,57 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  position: relative;
+  width: 700px;
+  min-width:700px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+header{
+  padding: .5rem;
+  border-bottom: 1px solid #cccccc;
+}
+a {
+  color: #00B7FF;
+}
+nav{
+  position: absolute;
+  left: -6rem;
+  width: 6rem;
+  border: 1px solid red;
+}
+nav a{ 
+  display: block;
+  padding: .5rem .5rem;
+  text-decoration: none;
+  text-align: right;
+  border: 1px solid yellowgreen;
+}
+article{
+  font-size: 1.14rem;
+  padding-top: 1rem;
+}
+
+/**index.ejs**/
+
+.post_info{
+  margin-top:2rem;
+}
+.post_info h2{
+}
+.post_info a{
+  color:#000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.post_info a:hover{
+  color: #00B7FF;
+}
+.post_info p{
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}

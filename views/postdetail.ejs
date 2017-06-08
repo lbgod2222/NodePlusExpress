@@ -1,0 +1,33 @@
+<%- include header %>
+<div class="post_info">
+<h2><a href="#"><%=  title %></a></h2>
+<p>
+  作者： <a href="#"><%= author %></a> <span>&nbsp;|&nbsp;</span>
+  日期： <%= postday %>
+</p>
+</div>
+<div><%= postcontent%></div>
+<div><% console.log(user,author) %></div>
+<% if(author == user) { %>
+<a href = '/postedit/<%= author %>/<%= queryday %>/<%= title %>'>编辑这篇文章</a>
+<a href = '/postdelete/<%= author %>/<%= queryday %>/<%= title %>'>删除这篇文章</a>
+
+<% } %>
+<% comment.forEach(function(comment,index){ %>
+<a href="#"><%= comment.nickname %></a>&nbsp;|&nbsp;
+<span><%= comment.time %></span><br/>
+<p><%= comment.comment %></p>
+<%})%>
+
+<% if(author != user) { %>
+<form action="/postdetail" method="post">
+<input type="hidden" name="postname" value=<%= author %>>
+<input type="hidden" name="posttitle" value=<%= title %>>
+<input type="hidden" name="postid" value=<%= id %>>
+昵称：<input type="text" name="nickname"><br/>
+邮箱：<input type="mail" name="mail"><br/>
+评论：<textarea name="comment" id="" cols="30" rows="10"></textarea>
+<input type="submit" value="提交评论">
+</form>
+<% } %>
+<%- include footer %>

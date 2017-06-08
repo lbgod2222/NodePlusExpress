@@ -1,0 +1,14 @@
+<%- include header %>
+<form action="/postedit/edit" method="post">
+<div class="post_edit">
+<p>
+  作者： <a href="#"><%= author %></a> <span>&nbsp;|&nbsp;</span>
+  日期： <%= postday %>
+</p>
+<input type="hidden" name="name" value="<%= author %>">
+<input type="hidden" name="title" value="<%= title %>">
+<textarea name="post" id="" cols="30" rows="10"><%= postcontent %></textarea>
+<input type="submit" value="保存修改">
+</div>
+</form>
+<%- include footer %>

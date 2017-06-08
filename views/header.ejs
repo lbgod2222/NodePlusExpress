@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="gb-2312"/>
+        <title>Multi-user blog</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <header>
+            <h1><%= title %></h1>
+        </header>
+        <nav>
+            <span><a href="/" title="主页">HOME</a></span>
+            <% if (!user) { %>
+            <% console.log(user) %>
+            <span><a href="/login" title="登录">LOGIN</a></span>
+            <span><a href="/register" title="注册">REGISTER</a></span>
+            <% } else { %>
+            <span><a href="/post" title="发表">POST</a></span>
+            <span><a href="/logout" title="登出">LOGOUT</a></span>
+            <% } %>
+        </nav>
+        <article>

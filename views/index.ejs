@@ -1,0 +1,18 @@
+<%- include header %>
+<% if(user) { %>
+欢迎你，<%= user %>
+<% } else { %>
+欢迎使用MultiuserBlog！
+<% } %>
+<% posts.forEach(function(post,index){ %>
+<div class="post_info">
+<h2><a href="/postdetail/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+<p>
+  作者： <a href="#"><%= post.name %></a> <span>&nbsp;|&nbsp;</span>
+  日期： <%= post.time.total %>
+</p>
+</div>
+<div><%= post.post%></div>
+<% }) %>
+<%- include footer %>
+
