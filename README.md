@@ -21,7 +21,24 @@
 * 数据库中发布表
 * 极简化设计
 
-###RUN IT
+##RUN IT
 ```bash
-$ git clone 
+$ git clone https://github.com/lbgod2222/NodePlusExpress.git
 ```
+###进入目录
+```bash
+$ cd Multiuserblog
+```
+###安装依赖
+```bash
+$ npm i
+```
+###首先你得搞个MongoDB的运行环境
+```bash
+修改数据库入口的设置在model/mongodbcrud.js中
+```
+###Then
+```bash
+$ npm run start
+```
+
